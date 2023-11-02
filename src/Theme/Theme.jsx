@@ -23,6 +23,12 @@ export const theme = createTheme({
     success: {
       main: '#5BD424', //Green
     },
+    text: {
+      white: '#FFF',
+      grey: {
+        normal: '#8F9094',
+      },
+    },
   },
   components: {
     MuiIconButton: {

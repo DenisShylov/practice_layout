@@ -29,7 +29,7 @@ const About = () => {
             lg: '710px',
             xl: '710px',
           },
-          color: '#FFF',
+          color: 'text.white',
         }}
       >
         <Typography
@@ -111,7 +111,7 @@ const About = () => {
                   <Typography color={'success.main'} fontSize={'24px'}>
                     {title}
                   </Typography>
-                  <Typography color={'#fff'} fontSize={'20px'}>
+                  <Typography color={'text.white'} fontSize={'20px'}>
                     {text}
                   </Typography>
                 </Box>
@@ -161,7 +161,7 @@ const About = () => {
                   </Typography>
                   <Typography
                     sx={{
-                      color: '#fff',
+                      color: 'text.white',
                       fontSize: {
                         xs: '16px',
                         sm: '20px',

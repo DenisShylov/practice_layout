@@ -17,8 +17,8 @@ import { BigLogo, Flag, SmallLogo, Social } from './Header.styles';
 
 const Header = () => {
   return (
-    <Box sx={{ display: 'flex', bgcolor: '#1A1C22' }}>
-      <AppBar component="nav">
+    <Box sx={{ display: 'flex', bgcolor: 'background.default' }}>
+      <AppBar component="nav" sx={{ boxShadow: 'none' }}>
         <Toolbar
           sx={{
             px: { xs: '16px', sm: '30px', md: '24px', lg: '55px', xl: '55px' },
@@ -85,7 +85,7 @@ const Header = () => {
                   component={'span'}
                   key={item}
                   sx={{
-                    color: '#8F9094',
+                    color: 'text.grey.normal',
                     fontWeight: 400,
                   }}
                 >
