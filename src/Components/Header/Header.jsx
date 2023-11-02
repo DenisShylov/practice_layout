@@ -26,7 +26,7 @@ const Header = () => {
             px: { xs: '16px', sm: '30px', md: '24px', lg: '55px', xl: '55px' },
           }}
         >
-          <Typography // tablet desktop
+          <Typography
             variant="h6"
             component="div"
             sx={{

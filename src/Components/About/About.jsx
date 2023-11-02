@@ -2,6 +2,7 @@ import { Box, Container, Typography } from '@mui/material';
 import React from 'react';
 import { Images } from './About.styles';
 import { AboutItems } from '../../Constants/AboutItems';
+
 const About = () => {
   return (
     <Container
@@ -10,9 +11,8 @@ const About = () => {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        mt: '160px',
-        gap: '56px',
-        width: '970px',
+        mt: { xs: '100px', sm: '100px', md: '140px', lg: '160px', xl: '160px' },
+        gap: { xs: '36px', sm: '36px', md: '56px', lg: '56px', xl: '56px' },
       }}
     >
       <Box
@@ -21,19 +21,45 @@ const About = () => {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          width: '710px',
+          width: {
+            xs: '328px',
+            sm: '510px',
+            md: '510px',
+            lg: '710px',
+            xl: '710px',
+          },
           color: '#FFF',
         }}
       >
-        <Typography variant={'h1'} sx={{ fontSize: '38px', color: 'green' }}>
+        <Typography
+          variant={'h1'}
+          sx={{
+            fontSize: {
+              xs: '32px',
+              sm: '32px',
+              md: '32px',
+              lg: '38px',
+              xl: '38px',
+            },
+            color: 'green',
+          }}
+        >
           About Platform
         </Typography>
         <Typography
           variant="h3"
-          align="center"
-          fontSize={'20px'}
-          fontWeight={400}
-          mt={2}
+          sx={{
+            textAlign: 'center',
+            fontSize: {
+              xs: '16px',
+              sm: '16px',
+              md: '20px',
+              lg: '20px',
+              xl: '20px',
+            },
+            fontWeight: 400,
+            mt: 2,
+          }}
         >
           Team8s provides a platform for practical programming experience
           through real-world activities.
@@ -43,9 +69,14 @@ const About = () => {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          width: '970px',
-          gap: '36px',
-          // mt: '56px',
+          width: {
+            xs: '328px',
+            sm: '708px',
+            md: '776px',
+            lg: '970px',
+            xl: '970px',
+          },
+          gap: { sm: '48px', md: '48px', lg: '36px', xl: '36px' },
         }}
       >
         {AboutItems.map(({ id, img, title, text }) => {
@@ -54,8 +85,16 @@ const About = () => {
               <Box
                 sx={{
                   display: 'flex',
+                  flexDirection: {
+                    xs: 'column',
+                    sm: 'column',
+                    md: 'column',
+                    lg: 'row',
+                    xl: 'row',
+                  },
                   justifyContent: 'space-between',
-                  gap: '130px',
+                  alignItems: { sm: 'center', md: 'center' },
+                  gap: { sm: '48px', md: '48px', lg: '130px', xl: '130px' },
                 }}
               >
                 <Images src={img} />
@@ -64,7 +103,7 @@ const About = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
-                    width: '470px',
+                    width: { lg: '470px', xl: '470px' },
                     gap: '16px',
                   }}
                 >
@@ -82,9 +121,16 @@ const About = () => {
               <Box
                 sx={{
                   display: 'flex',
-                  flexDirection: 'row-reverse',
-                  justifyContent: 'left',
-                  gap: '130px',
+                  flexDirection: {
+                    xs: 'column',
+                    sm: 'column',
+                    md: 'column',
+                    lg: 'row-reverse',
+                    xl: 'row-reverse',
+                  },
+                  justifyContent: { lg: 'left', xl: 'left' },
+                  alignItems: { sm: 'center', md: 'center' },
+                  gap: { sm: '24px', md: '24px', lg: '130px', xl: '130px' },
                 }}
               >
                 <Images src={img} />
@@ -94,14 +140,36 @@ const About = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'center',
-                    width: '370px',
+                    width: { sm: '100%', md: '100%', lg: '370px', xl: '370px' },
                     gap: '16px',
                   }}
                 >
-                  <Typography color={'green'} fontSize={'24px'}>
+                  <Typography
+                    sx={{
+                      color: 'green',
+                      fontSize: {
+                        xs: '20px',
+                        sm: '20px',
+                        md: '20px',
+                        lg: '20px',
+                        xl: '24px',
+                      },
+                    }}
+                  >
                     {title}
                   </Typography>
-                  <Typography color={'#fff'} fontSize={'20px'}>
+                  <Typography
+                    sx={{
+                      color: '#fff',
+                      fontSize: {
+                        xs: '16px',
+                        sm: '20px',
+                        md: '20px',
+                        lg: '20px',
+                        xl: '20px',
+                      },
+                    }}
+                  >
                     {text}
                   </Typography>
                 </Box>
