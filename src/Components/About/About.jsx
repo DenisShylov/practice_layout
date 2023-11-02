@@ -1,7 +1,8 @@
 import { Box, Container, Typography } from '@mui/material';
 import React from 'react';
-import { Images } from './About.styles';
+// Local files
 import { AboutItems } from '../../Constants/AboutItems';
+import { Images } from './About.styles';
 
 const About = () => {
   return (
@@ -41,7 +42,7 @@ const About = () => {
               lg: '38px',
               xl: '38px',
             },
-            color: 'green',
+            color: 'success.main',
           }}
         >
           About Platform
@@ -107,7 +108,7 @@ const About = () => {
                     gap: '16px',
                   }}
                 >
-                  <Typography color={'green'} fontSize={'24px'}>
+                  <Typography color={'success.main'} fontSize={'24px'}>
                     {title}
                   </Typography>
                   <Typography color={'#fff'} fontSize={'20px'}>
@@ -146,7 +147,7 @@ const About = () => {
                 >
                   <Typography
                     sx={{
-                      color: 'green',
+                      color: 'success.main',
                       fontSize: {
                         xs: '20px',
                         sm: '20px',

@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
-
 import MenuIcon from '@mui/icons-material/Menu';
-import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+// Local files
 import flag from '../../Assets/flag.png';
 import anotherIcon from '../../Assets/frame-1.png';
 import gitHubIcon from '../../Assets/frame-171.png';
