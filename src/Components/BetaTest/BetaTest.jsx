@@ -1,6 +1,6 @@
 import React from 'react';
 import { BoxTitle } from '../About/About.styles';
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { StarsImg } from './BataTest.styles';
 import starsLogo from '../../Assets/stars.webp';
 import { BetaTestItems } from '../../Constants/BetaTestItems';
