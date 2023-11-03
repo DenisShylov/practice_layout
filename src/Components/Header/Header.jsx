@@ -6,12 +6,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 // Local files
-import flag from '../../Assets/flag.png';
-import anotherIcon from '../../Assets/frame-1.png';
-import gitHubIcon from '../../Assets/frame-171.png';
-import tikTokIcon from '../../Assets/frame-173.png';
-import logoDesktop from '../../Assets/logo-desktop.png';
-import logo from '../../Assets/logo.png';
+import flag from '../../Assets/flag.webp';
+import anotherIcon from '../../Assets/frame-1.webp';
+import gitHubIcon from '../../Assets/frame-171.webp';
+import tikTokIcon from '../../Assets/frame-173.webp';
+import logoDesktop from '../../Assets/logo-desktop.webp';
+import logo from '../../Assets/logo.webp';
 import { NavBarItems } from '../../Constants/NavBarItem';
 import { BigLogo, Flag, SmallLogo, Social } from './Header.styles';
 
@@ -50,8 +50,8 @@ const Header = () => {
                 alignItems: 'center',
               }}
             >
-              <BigLogo src={logoDesktop} />
-              <Flag src={flag} />
+              <BigLogo src={logoDesktop} alt="big-logo" />
+              <Flag src={flag} alt="flag-logo" />
             </Box>
           </Typography>
           <Box
@@ -94,9 +94,9 @@ const Header = () => {
               ))}
             </Box>
             <Box sx={{ display: 'flex', gap: '16px' }}>
-              <Social src={anotherIcon} />
-              <Social src={tikTokIcon} />
-              <Social src={gitHubIcon} />
+              <Social src={anotherIcon} alt="social-logo" />
+              <Social src={tikTokIcon} alt="social-logo" />
+              <Social src={gitHubIcon} alt="social-logo" />
             </Box>
           </Box>
           <Typography
@@ -113,10 +113,11 @@ const Header = () => {
               width: '100%',
             }}
           >
-            <SmallLogo src={logo} />
+            <SmallLogo src={logo} alt="small-logo" />
             <IconButton
               edge="start"
               sx={{ ml: 'auto', mr: 1, display: { lg: 'none' } }}
+              name="burger-menu"
             >
               <MenuIcon />
             </IconButton>

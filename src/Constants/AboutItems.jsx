@@ -1,8 +1,8 @@
-import img1 from '../Assets/image 1276.png';
-import img2 from '../Assets/image 1286.png';
-import img3 from '../Assets/image 1279.png';
-import img4 from '../Assets/image 1282.png';
-import img5 from '../Assets/image 1284.png';
+import img1 from '../Assets/image-1276.webp';
+import img2 from '../Assets/image-1286.webp';
+import img3 from '../Assets/image-1279.webp';
+import img4 from '../Assets/image-1282.webp';
+import img5 from '../Assets/image-1284.webp';
 
 export const AboutItems = [
   {
