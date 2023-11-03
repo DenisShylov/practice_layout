@@ -12,6 +12,14 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: 'Rubik',
+    // h1: {
+    //   [breakpoints.up('xs', 'sm', 'md')]: {
+    //     fontSize: '32px',
+    //   },
+    //   [breakpoints.up('lg', 'xl')]: {
+    //     fontSize: '38px',
+    //   },
+    // },
   },
   palette: {
     background: {
@@ -26,7 +34,9 @@ export const theme = createTheme({
     text: {
       white: '#FFF',
       grey: {
+        light: '#C1C1C4',
         normal: '#8F9094',
+        dark: '#2F3239',
       },
     },
   },
