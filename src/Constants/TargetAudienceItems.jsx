@@ -1,8 +1,8 @@
-import logoStudent from '../Assets/AccordionImgs/student.png';
-import logotechnologist from '../Assets/AccordionImgs/technologist.png';
-import logoArtist from '../Assets/AccordionImgs/artist.png';
-import logoDetective from '../Assets/AccordionImgs/detective.png';
-import logoOldMan from '../Assets/AccordionImgs/oldMan.png';
+import logoStudent from '../Assets/AccordionImgs/student.webp';
+import logotechnologist from '../Assets/AccordionImgs/technologist.webp';
+import logoArtist from '../Assets/AccordionImgs/artist.webp';
+import logoDetective from '../Assets/AccordionImgs/detective.webp';
+import logoOldMan from '../Assets/AccordionImgs/oldMan.webp';
 
 export const TargetAudienceItems = [
   {

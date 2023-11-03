@@ -1,12 +1,20 @@
 import React from 'react';
 import { BoxTitle } from '../About/About.styles';
-import { Box, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import { StarsImg } from './BataTest.styles';
-import starsLogo from '../../Assets/stars.png';
+import starsLogo from '../../Assets/stars.webp';
 import { BetaTestItems } from '../../Constants/BetaTestItems';
 const BetaTest = () => {
   return (
-    <>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        mt: { xs: '100px', sm: '100px', md: '100px', lg: '160px', xl: '160px' },
+        gap: '36px',
+      }}
+    >
       <BoxTitle>
         <Typography
           variant={'h1'}
@@ -140,7 +148,7 @@ const BetaTest = () => {
           );
         })}
       </Box>
-    </>
+    </Box>
   );
 };
 

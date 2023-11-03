@@ -55,6 +55,7 @@ const About = () => {
             xl: '970px',
           },
           gap: { sm: '48px', md: '48px', lg: '36px', xl: '36px' },
+          mt: '56px',
         }}
       >
         {AboutItems.map(({ id, img, title, text }) => {

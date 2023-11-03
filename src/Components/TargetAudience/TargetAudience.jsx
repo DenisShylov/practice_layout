@@ -7,18 +7,25 @@ import React, { useState } from 'react';
 import { PersonLogo } from './TargetAudience.styles';
 import { TargetAudienceItems } from '../../Constants/TargetAudienceItems';
 import { BoxTitle } from '../About/About.styles';
-import AddIcon from '@mui/icons-material/Add';
-import RemoveIcon from '@mui/icons-material/Remove';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 const TargetAudience = () => {
-  const [isExpanded, setIsExpanded] = useState({ open: false, id: '' });
-  console.log(isExpanded);
-  const handleTogglerAccordion = (e) => {
-    console.log(e.target);
-    setIsExpanded((prevState) => !prevState);
+  const [expanded, setExpanded] = useState('panel1');
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
   };
 
   return (
-    <>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '36px',
+        mt: { xs: '100px', sm: '100px', md: '100px', lg: '160px', xl: '160px' },
+      }}
+    >
       <BoxTitle>
         <Typography
           variant={'h1'}
@@ -70,32 +77,25 @@ const TargetAudience = () => {
           return (
             <Accordion
               key={id}
-              // expanded={isExpanded}
-              // onChange={handleTogglerAccordion}
+              expanded={expanded === `panel${id}`}
+              onChange={handleChange(`panel${id}`)}
               sx={{
                 bgcolor: 'inherit',
                 color: 'text.grey.light',
                 borderBottom: '1px solid ',
                 borderColor: 'text.grey.dark',
-                // height: '68px',
+
                 py: 2,
               }}
             >
               <AccordionSummary
-                sx={{ p: 0, margin: 0, display: 'flex', alignItems: 'center' }}
-                onClick={(e) =>
-                  setIsExpanded({
-                    open: e.currentTarget.ariaExpanded,
-                    id: e.currentTarget.id,
-                  })
-                }
-                expandIcon={
-                  isExpanded.open ? (
-                    <AddIcon sx={{ color: 'text.white' }} />
-                  ) : (
-                    <RemoveIcon sx={{ color: 'text.white' }} />
-                  )
-                }
+                sx={{
+                  p: 0,
+                  margin: 0,
+                  display: 'flex',
+                  alignItems: 'center',
+                }}
+                expandIcon={<ExpandMoreIcon sx={{ color: 'text.white' }} />}
                 aria-controls={`panel${id}a-content`}
                 id={`panel${id}a-header`}
               >
@@ -124,7 +124,7 @@ const TargetAudience = () => {
           );
         })}
       </Box>
-    </>
+    </Box>
   );
 };
 
