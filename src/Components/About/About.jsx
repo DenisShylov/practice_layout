@@ -1,40 +1,17 @@
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import React from 'react';
 // Local files
 import { AboutItems } from '../../Constants/AboutItems';
-import { Images } from './About.styles';
+import { BoxTitle, Images } from './About.styles';
 
 const About = () => {
   return (
-    <Container
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        mt: { xs: '100px', sm: '100px', md: '140px', lg: '160px', xl: '160px' },
-        gap: { xs: '36px', sm: '36px', md: '56px', lg: '56px', xl: '56px' },
-      }}
-    >
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          width: {
-            xs: '328px',
-            sm: '510px',
-            md: '510px',
-            lg: '710px',
-            xl: '710px',
-          },
-          color: 'text.white',
-        }}
-      >
+    <>
+      <BoxTitle>
         <Typography
           variant={'h1'}
           sx={{
+            fontWeight: 600,
             fontSize: {
               xs: '32px',
               sm: '32px',
@@ -48,7 +25,7 @@ const About = () => {
           About Platform
         </Typography>
         <Typography
-          variant="h3"
+          variant="h2"
           sx={{
             textAlign: 'center',
             fontSize: {
@@ -65,7 +42,7 @@ const About = () => {
           Team8s provides a platform for practical programming experience
           through real-world activities.
         </Typography>
-      </Box>
+      </BoxTitle>
       <Box
         sx={{
           display: 'flex',
@@ -84,6 +61,7 @@ const About = () => {
           if (id % 2 !== 0) {
             return (
               <Box
+                key={id}
                 sx={{
                   display: 'flex',
                   flexDirection: {
@@ -95,7 +73,13 @@ const About = () => {
                   },
                   justifyContent: 'space-between',
                   alignItems: { sm: 'center', md: 'center' },
-                  gap: { sm: '48px', md: '48px', lg: '130px', xl: '130px' },
+                  gap: {
+                    xs: '24px',
+                    sm: '48px',
+                    md: '48px',
+                    lg: '130px',
+                    xl: '130px',
+                  },
                 }}
               >
                 <Images src={img} />
@@ -108,7 +92,19 @@ const About = () => {
                     gap: '16px',
                   }}
                 >
-                  <Typography color={'success.main'} fontSize={'24px'}>
+                  <Typography
+                    sx={{
+                      color: 'success.main',
+                      fontWeight: 500,
+                      fontSize: {
+                        xs: '20px',
+                        sm: '24px',
+                        md: '24px',
+                        lg: '24px',
+                        xl: '24px',
+                      },
+                    }}
+                  >
                     {title}
                   </Typography>
                   <Typography color={'text.white'} fontSize={'20px'}>
@@ -120,6 +116,7 @@ const About = () => {
           } else {
             return (
               <Box
+                key={id}
                 sx={{
                   display: 'flex',
                   flexDirection: {
@@ -131,7 +128,13 @@ const About = () => {
                   },
                   justifyContent: { lg: 'left', xl: 'left' },
                   alignItems: { sm: 'center', md: 'center' },
-                  gap: { sm: '24px', md: '24px', lg: '130px', xl: '130px' },
+                  gap: {
+                    xs: '24px',
+                    sm: '24px',
+                    md: '24px',
+                    lg: '130px',
+                    xl: '130px',
+                  },
                 }}
               >
                 <Images src={img} />
@@ -148,11 +151,12 @@ const About = () => {
                   <Typography
                     sx={{
                       color: 'success.main',
+                      fontWeight: 500,
                       fontSize: {
                         xs: '20px',
-                        sm: '20px',
-                        md: '20px',
-                        lg: '20px',
+                        sm: '24px',
+                        md: '24px',
+                        lg: '24px',
                         xl: '24px',
                       },
                     }}
@@ -179,7 +183,7 @@ const About = () => {
           }
         })}
       </Box>
-    </Container>
+    </>
   );
 };
 
