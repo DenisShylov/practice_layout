@@ -7,12 +7,13 @@ import React, { useState } from 'react';
 import { PersonLogo } from './TargetAudience.styles';
 import { TargetAudienceItems } from '../../Constants/TargetAudienceItems';
 import { BoxTitle } from '../About/About.styles';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 
 const TargetAudience = () => {
   const [expanded, setExpanded] = useState('panel1');
 
-  const handleChange = (panel) => (event, isExpanded) => {
+  const handleChange = (panel) => (_, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
 
@@ -95,7 +96,13 @@ const TargetAudience = () => {
                   display: 'flex',
                   alignItems: 'center',
                 }}
-                expandIcon={<ExpandMoreIcon sx={{ color: 'text.white' }} />}
+                expandIcon={
+                  expanded === `panel${id}` ? (
+                    <RemoveIcon sx={{ color: 'text.white' }} />
+                  ) : (
+                    <AddIcon sx={{ color: 'text.white' }} />
+                  )
+                }
                 aria-controls={`panel${id}a-content`}
                 id={`panel${id}a-header`}
               >
