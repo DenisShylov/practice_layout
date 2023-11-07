@@ -14,7 +14,12 @@ const description =
 const StartExploring = () => {
   return (
     <RootStartExploring>
-      <BaseBoxTitle title={title} description={description} />
+      <BaseBoxTitle
+        title={title}
+        description={description}
+        id="Start Exploring"
+        sx={{ fontSize: '16px' }}
+      />
 
       <Box sx={{ px: '24px', textAlign: 'center' }}>
         <ButtonStartExploring>Join Beta</ButtonStartExploring>
