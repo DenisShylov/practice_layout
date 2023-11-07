@@ -1,9 +1,6 @@
 import { Box, Typography, styled } from '@mui/material';
 
-export const Images = styled('img')(() => ({
-  width: 'auto',
-  height: 'auto',
-}));
+export const Images = styled('img')({});
 
 export const WrappedAboutBox = styled(Box)(({ theme }) => ({
   display: 'flex',

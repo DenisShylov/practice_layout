@@ -18,16 +18,16 @@ const Footer = () => {
   return (
     <RootBoxFooter>
       <ContentBox>
-        <FooterLogo src={logo} />
+        <FooterLogo src={logo} loading="lazy" />
         <Typography
           sx={{ color: 'text.grey.normal', fontSize: '16px', fontWeight: 400 }}
         >
           {screenSizeCondition ? '© 2023' : 'Copyright© 2023 '}
         </Typography>
         <Box sx={{ display: isExtraSmallSize, gap: '16px' }}>
-          <Social src={anotherIcon} alt="social-logo" />
-          <Social src={tikTokIcon} alt="social-logo" />
-          <Social src={gitHubIcon} alt="social-logo" />
+          <Social loading="lazy" src={anotherIcon} alt="social-logo" />
+          <Social loading="lazy" src={tikTokIcon} alt="social-logo" />
+          <Social loading="lazy" src={gitHubIcon} alt="social-logo" />
         </Box>
       </ContentBox>
     </RootBoxFooter>

@@ -1,6 +1,9 @@
 import React from 'react';
-import { BoxTitle } from '../../Shared/BoxTitle';
-import { TypographyDescription, TypographyTitle } from './BaseBoxTitle.styles';
+import {
+  BoxTitle,
+  TypographyDescription,
+  TypographyTitle,
+} from './BaseBoxTitle.styles';
 
 const BaseBoxTitle = ({ title, description }) => {
   return (

@@ -66,7 +66,7 @@ const TargetAudience = () => {
                 aria-controls={`panel${id}a-content`}
                 id={`panel${id}a-header`}
               >
-                {<PersonLogo src={logo} alt={alt} />}
+                {<PersonLogo loading="lazy" src={logo} alt={alt} />}
                 <Box sx={{ ml: 1 }}>
                   <AccordionTitle>{title}</AccordionTitle>
                 </Box>

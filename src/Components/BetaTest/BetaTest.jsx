@@ -27,7 +27,7 @@ const BetaTest = () => {
           return (
             <BoxItem key={id}>
               <BoxItemImg>
-                <StarsImg src={starsLogo} alt="Stars-logo" />
+                <StarsImg loading="lazy" src={starsLogo} alt="Stars-logo" />
                 <BoxItemText key={id}>
                   <TypographyTitle variant="h1">{title}</TypographyTitle>
                   <TypographyText variant="h2">{text}</TypographyText>

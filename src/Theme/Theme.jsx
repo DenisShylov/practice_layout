@@ -11,18 +11,13 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Rubik',
+    fontFamily: ['Rubik', 'Roboto', 'sans-serif'].join(','),
   },
   palette: {
     background: {
       default: '#1A1C22', //Black
     },
-    primary: {
-      main: '#1A1C22', //Black
-    },
-    success: {
-      main: '#5BD424', //Green
-    },
+    success: { main: '#5BD424' },
     text: {
       white: '#FFF',
       green: '#5BD424',
