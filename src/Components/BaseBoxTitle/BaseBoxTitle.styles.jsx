@@ -20,6 +20,7 @@ export const BoxTitle = styled(Box)(({ theme }) => ({
 
 export const TypographyTitle = styled(Typography)(({ theme }) => ({
   fontWeight: 600,
+  textAlign: 'center',
   [theme.breakpoints.up('xs', 'sm', 'md')]: {
     fontSize: '32px',
   },
@@ -41,3 +42,12 @@ export const TypographyDescription = styled(Typography)(({ theme }) => ({
   fontWeight: 400,
   marginTop: '16px',
 }));
+
+export const TypographyDescriptionStartExploring = styled(Typography)(
+  ({ theme }) => ({
+    textAlign: 'center',
+    fontSize: '16px',
+    fontWeight: 400,
+    marginTop: '16px',
+  })
+);
