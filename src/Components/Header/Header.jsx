@@ -35,7 +35,7 @@ const Header = () => {
         <HeaderToolbar>
           <ToolbarTypography component="div">
             <LogoBox>
-              <BigLogo src={logoDesktop} alt="big-logo" />
+              <BigLogo src={logoDesktop} alt="team8s-logo" />
               <Flag src={flag} alt="flag-logo" />
             </LogoBox>
           </ToolbarTypography>
@@ -65,7 +65,7 @@ const Header = () => {
             <IconButton
               edge="start"
               sx={{ ml: 'auto', mr: 1, display: { lg: 'none' } }}
-              name="burger-menu"
+              name="menuIcon"
             >
               <MenuIcon />
             </IconButton>

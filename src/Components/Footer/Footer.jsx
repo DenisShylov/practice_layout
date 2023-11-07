@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <RootBoxFooter>
       <ContentBox>
-        <FooterLogo src={logo} loading="lazy" />
+        <FooterLogo src={logo} loading="lazy" alt="team8s-logo" />
         <Typography
           sx={{ color: 'text.grey.normal', fontSize: '16px', fontWeight: 400 }}
         >
