@@ -21,14 +21,13 @@ const About = () => {
     <>
       <BaseBoxTitle title={title} description={description} />
       <WrappedAboutBox>
-        {AboutItems.map(({ id, img, title, text }) => {
+        {AboutItems.map(({ id, img, width, height, title, text }) => {
           if (id % 2 !== 0) {
             return (
               <AboutBoxItem key={id}>
                 <Images
-                  loading="lazy"
-                  width="auto"
-                  height="auto"
+                  width={width}
+                  height={height}
                   src={img}
                   alt={`${title}-image`}
                 />
@@ -53,9 +52,8 @@ const About = () => {
                 }}
               >
                 <Images
-                  loading="lazy"
-                  width="auto"
-                  height="auto"
+                  width={width}
+                  height={height}
                   src={img}
                   alt={`${title}-image`}
                 />

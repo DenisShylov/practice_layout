@@ -35,8 +35,8 @@ const Header = () => {
         <HeaderToolbar>
           <ToolbarTypography component="div">
             <LogoBox>
-              <BigLogo loading="lazy" src={logoDesktop} alt="big-logo" />
-              <Flag loading="lazy" src={flag} alt="flag-logo" />
+              <BigLogo src={logoDesktop} alt="big-logo" />
+              <Flag src={flag} alt="flag-logo" />
             </LogoBox>
           </ToolbarTypography>
           <WrappedNavBarBox>
@@ -55,9 +55,9 @@ const Header = () => {
               ))}
             </NavBarBox>
             <Box sx={{ display: 'flex', gap: '16px' }}>
-              <Social loading="lazy" src={anotherIcon} alt="social-logo" />
-              <Social loading="lazy" src={tikTokIcon} alt="social-logo" />
-              <Social loading="lazy" src={gitHubIcon} alt="social-logo" />
+              <Social src={anotherIcon} alt="social-logo" />
+              <Social src={tikTokIcon} alt="social-logo" />
+              <Social src={gitHubIcon} alt="social-logo" />
             </Box>
           </WrappedNavBarBox>
           <SmallLogoBox>
