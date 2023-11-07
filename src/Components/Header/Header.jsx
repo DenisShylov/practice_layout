@@ -2,7 +2,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 // Local files
@@ -13,73 +12,35 @@ import tikTokIcon from '../../Assets/frame-173.webp';
 import logoDesktop from '../../Assets/logo-desktop.webp';
 import logo from '../../Assets/logo.webp';
 import { NavBarItems } from '../../Constants/NavBarItem';
-import { BigLogo, Flag, SmallLogo, Social } from './Header.styles';
+import {
+  BigLogo,
+  Flag,
+  HeaderToolbar,
+  LogoBox,
+  NavBarBox,
+  SmallLogo,
+  SmallLogoBox,
+  Social,
+  ToolbarTypography,
+  WrappedNavBarBox,
+} from './Header.styles';
 
 const Header = () => {
   return (
-    <Box sx={{ display: 'flex', bgcolor: 'background.default' }}>
-      <AppBar component="nav" sx={{ boxShadow: 'none' }}>
-        <Toolbar
-          sx={{
-            px: { xs: '16px', sm: '30px', md: '24px', lg: '55px', xl: '55px' },
-          }}
-        >
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{
-              flexGrow: 1,
-              display: {
-                xs: 'none',
-                sm: 'none',
-                md: 'none',
-                lg: 'block',
-                xl: 'block',
-              },
-            }}
-          >
-            <Box
-              sx={{
-                display: {
-                  xs: 'none',
-                  sm: 'none',
-                  md: 'none',
-                  lg: 'flex',
-                  xl: 'flex',
-                },
-                alignItems: 'center',
-              }}
-            >
-              <BigLogo src={logoDesktop} alt="big-logo" />
-              <Flag src={flag} alt="flag-logo" />
-            </Box>
-          </Typography>
-          <Box
-            sx={{
-              display: {
-                xs: 'none',
-                sm: 'none',
-                md: 'none',
-                lg: 'flex',
-                xl: 'flex',
-              },
-              gap: '32px',
-            }}
-          >
-            <Box
-              sx={{
-                display: {
-                  xs: 'none',
-                  sm: 'none',
-                  md: 'none',
-                  lg: 'flex',
-                  xl: 'flex',
-                },
-                alignItems: 'center',
-                height: '32px',
-                gap: '24px',
-              }}
-            >
+    <Box sx={{ display: 'flex' }}>
+      <AppBar
+        component="nav"
+        sx={{ bgcolor: 'background.default', boxShadow: 'none' }}
+      >
+        <HeaderToolbar>
+          <ToolbarTypography component="div">
+            <LogoBox>
+              <BigLogo loading="lazy" src={logoDesktop} alt="big-logo" />
+              <Flag loading="lazy" src={flag} alt="flag-logo" />
+            </LogoBox>
+          </ToolbarTypography>
+          <WrappedNavBarBox>
+            <NavBarBox>
               {NavBarItems.map((item) => (
                 <Typography
                   component={'span'}
@@ -92,28 +53,15 @@ const Header = () => {
                   {item}
                 </Typography>
               ))}
-            </Box>
+            </NavBarBox>
             <Box sx={{ display: 'flex', gap: '16px' }}>
-              <Social src={anotherIcon} alt="social-logo" />
-              <Social src={tikTokIcon} alt="social-logo" />
-              <Social src={gitHubIcon} alt="social-logo" />
+              <Social loading="lazy" src={anotherIcon} alt="social-logo" />
+              <Social loading="lazy" src={tikTokIcon} alt="social-logo" />
+              <Social loading="lazy" src={gitHubIcon} alt="social-logo" />
             </Box>
-          </Box>
-          <Typography
-            component={'div'}
-            sx={{
-              display: {
-                xl: 'none',
-                lg: 'none',
-                xs: 'flex',
-                sm: 'flex',
-                md: 'flex',
-              },
-              justifyContent: 'space-beetwen',
-              width: '100%',
-            }}
-          >
-            <SmallLogo src={logo} alt="small-logo" />
+          </WrappedNavBarBox>
+          <SmallLogoBox>
+            <SmallLogo loading="lazy" src={logo} alt="small-logo" />
             <IconButton
               edge="start"
               sx={{ ml: 'auto', mr: 1, display: { lg: 'none' } }}
@@ -121,8 +69,8 @@ const Header = () => {
             >
               <MenuIcon />
             </IconButton>
-          </Typography>
-        </Toolbar>
+          </SmallLogoBox>
+        </HeaderToolbar>
       </AppBar>
     </Box>
   );

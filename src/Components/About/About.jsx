@@ -25,7 +25,13 @@ const About = () => {
           if (id % 2 !== 0) {
             return (
               <AboutBoxItem key={id}>
-                <Images src={img} alt={`${title}-image`} />
+                <Images
+                  loading="lazy"
+                  width="auto"
+                  height="auto"
+                  src={img}
+                  alt={`${title}-image`}
+                />
                 <AboutBoxItemTitle>
                   <AboutTypographyTitle>{title}</AboutTypographyTitle>
                   <AboutTypographyDescription>
@@ -46,7 +52,13 @@ const About = () => {
                   justifyContent: { lg: 'left', xl: 'left' },
                 }}
               >
-                <Images src={img} alt={`${title}-image`} />
+                <Images
+                  loading="lazy"
+                  width="auto"
+                  height="auto"
+                  src={img}
+                  alt={`${title}-image`}
+                />
 
                 <AboutBoxItemTitle
                   sx={{
