@@ -1,16 +1,3 @@
-@font-face {
-  font-family: 'Rubik';
-  src: url(./Assets/Fonts/static/Rubik-Regular.ttf) format('ttf');
-}
-@font-face {
-  font-family: 'Rubik';
-  src: url(./Assets/Fonts/static/Rubik-Medium.ttf) format('ttf');
-}
-@font-face {
-  font-family: 'Rubik';
-  src: url(./Assets/Fonts/static/Rubik-SemiBold.ttf) format('ttf');
-}
-
 #root {
   display: flex;
   flex-direction: column;
