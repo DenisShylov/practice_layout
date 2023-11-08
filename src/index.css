@@ -4,3 +4,7 @@
   justify-content: center;
   width: 100%;
 }
+
+body {
+  font-family: 'Rubik', 'sans-serif';
+}
